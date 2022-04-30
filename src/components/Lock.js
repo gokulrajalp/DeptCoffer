@@ -5,11 +5,29 @@ export default function Lock(){
     
     function verify(){
     let value = document.querySelector('#mail').value;
-        if(value==="gokulrajalp@gmail.com"){
-            navigate('/signin');
+    var Num;
+        if(!localStorage.getItem("Num")){
+            Num=0;
+            localStorage.setItem("Num",Num);
+        }else{
+            Num = parseInt(localStorage.getItem("Num"));
         }
-        
-    };
+        localStorage.setItem(`${Num}`,"gokulrajalp@gmail.com");
+        Num++;
+        localStorage.setItem(`${Num}`,"gokulraja@gmail.com");
+        Num++;
+        var check = false;
+        for(var i=0; i<Num; i++){
+            if(value===localStorage.getItem(`${i}`)){
+                check = true;
+            }
+        }
+        if(check){
+            navigate('/password');
+        }else{
+            navigate('/signin'); 
+        }
+    }
     
     return(
     <div>
