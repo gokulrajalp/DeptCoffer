@@ -12,20 +12,22 @@ export default function Lock(){
         }else{
             Num = parseInt(localStorage.getItem("Num"));
         }
-        localStorage.setItem(`${Num}`,"gokulrajalp@gmail.com");
-        Num++;
-        localStorage.setItem(`${Num}`,"gokulraja@gmail.com");
-        Num++;
         var check = false;
         for(var i=0; i<Num; i++){
             if(value===localStorage.getItem(`${i}`)){
                 check = true;
+                localStorage.setItem("current",i);
             }
         }
+        
         if(check){
             navigate('/password');
         }else{
-            navigate('/signin'); 
+            localStorage.setItem(`${Num}`,value);
+            localStorage.setItem("current",Num);
+            Num++;
+            localStorage.setItem("Num",Num);
+            navigate('/signin');
         }
     }
     

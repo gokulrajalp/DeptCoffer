@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Lock from './components/Lock';
 import Signin from './components/Signin';
 import Password from './components/Password';
+import User from './components/User';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path='/' element={<Lock/>}/>
         <Route path='/signin' element={<Signin/>}/>
         <Route path='/password' element={<Password/>}/>
+        <Route path='/user' element={<User/>}/>
       </Routes>
     </Router>
   );
