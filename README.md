@@ -3,15 +3,15 @@
 
 ## ABSTRACT
 
-This project is an open source software which can be used by any college.
+* This project is an open source software which can be used by any college.
 
-Here the user(student) can request anything related their needs in the department in our web application.
+* Here the user(student) can request anything related their needs in the department in our web application.
 
-Needs like leave requisition, on-duty form, bonafide certificate, etc.
+* Needs like leave requisition, on-duty form, bonafide certificate, etc.
 
-After the approval of supervisor, the admin will give the final call.
+* After the approval of supervisor, the admin will give the final call.
 
-All details are maintained in the database for future reference.
+* All details are maintained in the database for future reference.
 
 ## USER MODULE
 
