@@ -15,48 +15,48 @@
 
 ## USER MODULE
 
-After validating the correct credentials for the user, the user page will be displayed.
+* After validating the correct credentials for the user, the user page will be displayed.
 
-Here the user requests to the supervisor.
+* Here the user requests to the supervisor.
 
-After the approval from both supervisor and the admin, the user will get the certificate.
+* After the approval from both supervisor and the admin, the user will get the certificate.
 
-Certificate contains the unique id which can be validated anytime.
+* Certificate contains the unique id which can be validated anytime.
 
-If required, user must submit the details with the proof which will be stored in database.
+* If required, user must submit the details with the proof which will be stored in database.
 
 ## SUPERVISOR MODULE
 
-After validating the correct credentials for the supervisor, the supervisor dashboard will be displayed.
+* After validating the correct credentials for the supervisor, the supervisor dashboard will be displayed.
 
-Here all the requests from the user will be displayed for the approval.
+* Here all the requests from the user will be displayed for the approval.
 
-After the approval, the further request is sent to the admin.
+* After the approval, the further request is sent to the admin.
 
 ## ADMIN MODULE
 
-After validating the correct credentials for the admin, the admin dashboard will be displayed.
+* After validating the correct credentials for the admin, the admin dashboard will be displayed.
 
-Here all the request which is approved by the supervisor will be displayed for the admin approval.
+* Here all the request which is approved by the supervisor will be displayed for the admin approval.
 
-If the admin approves the request then the certificate will be generated with the unique id.
+* If the admin approves the request then the certificate will be generated with the unique id.
 
-Admin can cancel the request at any time and the notification will be sent to the user.
+* Admin can cancel the request at any time and the notification will be sent to the user.
 
-Everything is stored in database which will be retrieved and displayed on admin dashboard.
+* Everything is stored in database which will be retrieved and displayed on admin dashboard.
 
 ## TECHNOLOGIES GOING TO USE 
 ###         FRONT-END : 
-                React JS 
+               - React JS 
 ###         BACK-END : 
-                 Spring Boot 
-                 MySQL
+               - Spring Boot 
+               - MySQL
 
 ## APPLICATION 
-It can be applicable to any institutions or organizations.
+* It can be applicable to any institutions or organizations.
 
-For eg : Schools, Colleges, IT sectors ,Government offices ,etc.
+* For eg : Schools, Colleges, IT sectors ,Government offices ,etc.
 
-It can be used to store the request information in a database.
+* It can be used to store the request information in a database.
 
-Admin can filter and view all the information.
+* Admin can filter and view all the information.
