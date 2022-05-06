@@ -5,6 +5,8 @@ import Lock from './components/Lock';
 import Signin from './components/Signin';
 import Password from './components/Password';
 import User from './components/User';
+import Admin from './components/Admin';
+import Supervisor from './components/Supervisor';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path='/signin' element={<Signin/>}/>
         <Route path='/password' element={<Password/>}/>
         <Route path='/user' element={<User/>}/>
+        <Route path='/supervisor' element={<Supervisor/>}/>
+        <Route path='/admin' element={<Admin/>}/>
       </Routes>
     </Router>
   );
