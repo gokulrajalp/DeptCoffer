@@ -88,7 +88,7 @@ export default function Signin(){
         <>{mail}</><button onClick={remove}>change and delete this mail</button>
 <br/><br/>
 <h3>use this application as</h3>
-        <select className='type'>
+        <select className='type' onChange={change}>
             <option value="user">User</option>
             <option value="supervisor">Supervisor</option>
             <option value="admin">Admin</option>
@@ -103,7 +103,7 @@ export default function Signin(){
         <h3>Department *</h3><input className='deep'/>
 
         
-        if(document.querySelector('.type').value!=="select"){<div><h3>Year/Section *</h3><input className='year'/></div>}
+        <h3>Year/Section *</h3><input className='year'/>
         <h2>Class Code *(is you are an admin generate new code)</h2><input className='code'/>
 
         <h3>New Password *</h3><input className='password' type={"password"}/>
