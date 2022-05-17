@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Signin(){
 
     let navigate = useNavigate();
-    function verify(){
+    const verify = () =>{
         
         if(document.querySelector('.password').value===localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_password`)){
             navigate(`/${localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_type`)}`);
