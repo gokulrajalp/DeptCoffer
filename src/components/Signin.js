@@ -29,20 +29,9 @@ export default function Signin(){
             return;
         }
 
-        let values = Object.values(localStorage);
-        for(var i=0; i<values.length; i++){
-            if(values[i]===document.querySelector('.reg').value){
-                alert("this reg.no is already registered");
-                return;
-            }
-        }
+        
 
-        if(document.querySelector('.reg').value){
-            localStorage.setItem(`${mail}_reg`,document.querySelector('.reg').value);
-            }else{
-                alert("enter the Reg.No");
-                return;
-            }
+        
     
     
             if(document.querySelector('.deep').value){
@@ -75,7 +64,20 @@ export default function Signin(){
                                 return;
                             }
 
-            
+            let values = Object.values(localStorage);
+        for(var i=0; i<values.length; i++){
+            if(values[i]===document.querySelector('.reg').value){
+                alert("this reg.no is already registered");
+                return;
+            }
+        }
+        
+        if(document.querySelector('.reg').value){
+            localStorage.setItem(`${mail}_reg`,document.querySelector('.reg').value);
+            }else{
+                alert("enter the Reg.No");
+                return;
+            }
                             navigate('/password');
                 
                                                 
@@ -85,16 +87,22 @@ export default function Signin(){
         <h1>Welcome to the DeptCoffer</h1>
         <>{mail}</><button onClick={remove}>change and delete this mail</button>
 <br/><br/>
-<h3>Select your type of usage</h3>
-        <select className='type'>
-            <option value="select">Select</option>
+<h3>use this application as</h3>
+        <select className='type' onChange={change}>
             <option value="user">User</option>
             <option value="supervisor">Supervisor</option>
             <option value="admin">Admin</option>
         </select>
+
+
+
+
+        
         <h3>name *</h3><input className='name' />
-        <h3>Reg.No *</h3><input className='reg' />
-        <h3>Deepartment *</h3><input className='deep'/>
+        <h3>ID.No *</h3><input className='reg' />
+        <h3>Department *</h3><input className='deep'/>
+
+        
         <h3>Year/Section *</h3><input className='year'/>
         <h2>Class Code *(is you are an admin generate new code)</h2><input className='code'/>
 

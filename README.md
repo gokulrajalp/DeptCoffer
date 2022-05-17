@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Dept Coffer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## ABSTRACT
 
-In the project directory, you can run:
+* This project is an open source software which can be used by any college.
 
-### `npm start`
+* Here the user(student) can request anything related their needs in the department in our web application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Needs like leave requisition, on-duty form, bonafide certificate, etc.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* After the approval of supervisor, the admin will give the final call.
 
-### `npm test`
+* All details are maintained in the database for future reference.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## USER MODULE
 
-### `npm run build`
+* After validating the correct credentials for the user, the user page will be displayed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Here the user requests to the supervisor.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* After the approval from both supervisor and the admin, the user will get the certificate.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Certificate contains the unique id which can be validated anytime.
 
-### `npm run eject`
+* If required, user must submit the details with the proof which will be stored in database.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## SUPERVISOR MODULE
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* After validating the correct credentials for the supervisor, the supervisor dashboard will be displayed.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Here all the requests from the user will be displayed for the approval.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* After the approval, the further request is sent to the admin.
 
-## Learn More
+## ADMIN MODULE
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* After validating the correct credentials for the admin, the admin dashboard will be displayed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Here all the request which is approved by the supervisor will be displayed for the admin approval.
 
-### Code Splitting
+* If the admin approves the request then the certificate will be generated with the unique id.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Admin can cancel the request at any time and the notification will be sent to the user.
 
-### Analyzing the Bundle Size
+* Everything is stored in database which will be retrieved and displayed on admin dashboard.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## TECHNOLOGIES GOING TO USE 
+###         FRONT-END : 
+               - React JS 
+###         BACK-END : 
+               - Spring Boot 
+               - MySQL
 
-### Making a Progressive Web App
+## APPLICATION 
+* It can be applicable to any institutions or organizations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* For eg : Schools, Colleges, IT sectors ,Government offices ,etc.
 
-### Advanced Configuration
+* It can be used to store the request information in a database.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Admin can filter and view all the information.
