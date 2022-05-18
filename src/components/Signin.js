@@ -41,16 +41,21 @@ export default function Signin(){
                     return;
                 }
         
-        
-                if(document.querySelector('.year').value){
+                
+                if(document.querySelector('.type').value==="user"){
+
+
+                if(document.querySelector('.year_value').value){
                     localStorage.setItem(`${mail}_year`,document.querySelector('.year').value);
                     }else{
                         alert("enter the year");
                         return;
                     }
             
-            
-                    if(document.querySelector('.code').value){
+                }
+
+
+                    if(document.querySelector('.code_value').value){
                         localStorage.setItem(`${mail}_code`,document.querySelector('.code').value);
                         }else{
                             alert("enter the code");
@@ -82,6 +87,29 @@ export default function Signin(){
                 
                                                 
     }
+
+
+
+
+    function change(){
+        if(document.querySelector('.type').value==="admin"){
+            document.querySelector('.code_admin').classList.remove("d-none");
+            document.querySelector('.code').classList.add("d-none");
+            document.querySelector('.year').classList.add("d-none");
+        } else if(document.querySelector('.type').value==="supervisor"){
+            document.querySelector('.code_admin').classList.add("d-none");
+            document.querySelector('.code').classList.remove("d-none");
+            document.querySelector('.year').classList.add("d-none");  
+        }else{
+            document.querySelector('.code_admin').classList.add("d-none");
+            document.querySelector('.code').classList.remove("d-none");
+            document.querySelector('.year').classList.remove("d-none");  
+        }
+    }
+
+
+
+
     return(
     <div>
         <h1>Welcome to the DeptCoffer</h1>
@@ -103,8 +131,8 @@ export default function Signin(){
         <h3>Department *</h3><input className='deep'/>
 
         
-        <h3>Year/Section *</h3><input className='year'/>
-        <h2>Class Code *(is you are an admin generate new code)</h2><input className='code'/>
+        <div className='year'><h3>Year/Section *</h3><input className='year_value'/></div>
+        <h2>Class Code *<span className='code'>(ask your Admin)</span>  <span className='code_admin d-none'>(Generate the code for your students and supervisors)</span> </h2><input className='code_value'/>
 
         <h3>New Password *</h3><input className='password' type={"password"}/>
         <h3>Confirm Password *</h3><input className='confirm' type={"password"}/>
