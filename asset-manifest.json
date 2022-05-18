@@ -1,13 +1,13 @@
 {
-  "main.css": "/DeptCoffer/static/css/main.7bbb7505.chunk.css",
-  "main.js": "/DeptCoffer/static/js/main.efe9666e.chunk.js",
-  "main.js.map": "/DeptCoffer/static/js/main.efe9666e.chunk.js.map",
-  "static/js/1.3f64bc5a.chunk.js": "/DeptCoffer/static/js/1.3f64bc5a.chunk.js",
-  "static/js/1.3f64bc5a.chunk.js.map": "/DeptCoffer/static/js/1.3f64bc5a.chunk.js.map",
+  "main.css": "/DeptCoffer/static/css/main.fba23e29.chunk.css",
+  "main.js": "/DeptCoffer/static/js/main.5a1c022c.chunk.js",
+  "main.js.map": "/DeptCoffer/static/js/main.5a1c022c.chunk.js.map",
+  "static/js/1.58c62939.chunk.js": "/DeptCoffer/static/js/1.58c62939.chunk.js",
+  "static/js/1.58c62939.chunk.js.map": "/DeptCoffer/static/js/1.58c62939.chunk.js.map",
   "runtime~main.js": "/DeptCoffer/static/js/runtime~main.a088a9b4.js",
   "runtime~main.js.map": "/DeptCoffer/static/js/runtime~main.a088a9b4.js.map",
-  "static/css/main.7bbb7505.chunk.css.map": "/DeptCoffer/static/css/main.7bbb7505.chunk.css.map",
+  "static/css/main.fba23e29.chunk.css.map": "/DeptCoffer/static/css/main.fba23e29.chunk.css.map",
   "index.html": "/DeptCoffer/index.html",
-  "precache-manifest.a3da01af7b39527e216f9aa71b4289fb.js": "/DeptCoffer/precache-manifest.a3da01af7b39527e216f9aa71b4289fb.js",
+  "precache-manifest.65ff9a22aac975f1a303216c0cb65cc7.js": "/DeptCoffer/precache-manifest.65ff9a22aac975f1a303216c0cb65cc7.js",
   "service-worker.js": "/DeptCoffer/service-worker.js"
 }
