@@ -1,4 +1,5 @@
 import React from 'react';
+import './lock.css';
 import { useNavigate } from 'react-router-dom';
 export default function Lock(){
     let navigate = useNavigate();
@@ -32,10 +33,29 @@ export default function Lock(){
     }
     
     return(
-    <div>
-        <h1>Enter your mail ID to unlock this application</h1>
-            <input id='mail' type='mail'/><br/>
-            <button onClick={verify}>verify</button>
-    </div>
+      <html>
+          <body>
+    <div className='container'>
+    <h1 class="h1">DeptCoffer</h1>
+        <div class="align">
+        <h2>Enter your mail ID to unlock this application</h2>
+
+
+<form onSubmit={verify}>
+        <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Mail ID</span>
+  </div>
+  <input id='mail' type='mail' class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"></input>
+</div>
+
+<br/>
+<button className="btn btn-success" type="submit">Verify</button>
+</form>
+</div>
+</div>
+</body>
+    </html>
+    
     );
 }
