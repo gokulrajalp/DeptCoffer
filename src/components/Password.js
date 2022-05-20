@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import './Password.css';
 export default function Signin(){
 
     let navigate = useNavigate();
@@ -15,10 +15,19 @@ export default function Signin(){
 
     return(
     <div>
-        <h1>Welcome {localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_name`)}</h1>
-        <h1>Enter your Password</h1>
-        <input className='password' />
-        <button onClick={verify}>Verify</button>
+        <form onSubmit={verify}> 
+        <div class="msg">
+        <a id="greet">Welcome   </a>
+        <a id="user_name">{localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_name`)}</a>
+        </div>
+        <div class="pwd">
+        <h1 class="h11">Enter your Password</h1>
+        <div class="container"></div>
+        <input id="pass" className='password form-control' type='password' placeholder="password"></input>
+        <br></br>
+        <button className="btn btn-success" type="submit">Verify</button> 
+        </div>
+        </form>
     </div>
     );
 }
