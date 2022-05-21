@@ -12,25 +12,40 @@ export default function User(){
 
     return(
     <div >
-        <div class="msg1">
+        <div className='msg1'>
         <a id="greet1">Welcome </a>
         <a id="user_name1">{localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_name`)} </a> 
         <a id="pro">to DeptCoffer</a>
         </div>
-        <div class="container">
-        <h1>Request Status</h1>
-        <p class="para">No request found</p>
-        
-        <h1 id="h12">Add new Request</h1>
         <br></br>
-        <div class="req">
+        <div className='container'>
+        <h1><u>Request Status</u></h1>
+        <p className='para'>No request found</p>
+        <br></br>
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>Request-Title</th>
+                <th>Supervisor-Approval</th>
+                <th>Admin-Approval</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>On-Duty</td>
+                <td><button className="btn btn-success" type="submit">Approved</button></td>
+                <td><button className="btn btn-danger" type="submit">Pending</button></td>
+            </tr>
+        </table>
+        <br></br>
+        <h1 id="h12"><u>Add new Request</u></h1>
+        <div className='req'>
         <h3 id="req1">Request title</h3><input className='title'/>
         <br></br>
         <br></br>
         <h3 id="req2">Request Subject</h3><input className='subject'/>
         <br></br>
         <br></br>
-        <h3 id="req3">Request Description</h3><input className='description '/>
+        <h3 id="req3">Request Description</h3><textarea className='description '/>
         <br></br>
         <br></br>
         </div>

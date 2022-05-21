@@ -36,15 +36,15 @@ export default function Lock(){
       <html>
           <body>
     <div className='container'>
-    <h1 class="h1">DeptCoffer</h1>
-        <div class="align">
+    <h1 className='h1'>DeptCoffer</h1>
+        <div className='align'>
         <h2>Enter your mail ID to unlock this application</h2>
 
 
 <form onSubmit={verify}>
-        <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Mail ID</span>
+        <div className='input-group mb-3'>
+  <div className='input-group-prepend'>
+    <span className='input-group-text' id="basic-addon1">Mail ID</span>
   </div>
   <input id='mail' type='mail' class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"></input>
 </div>
