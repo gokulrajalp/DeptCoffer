@@ -7,7 +7,6 @@ import Password from './components/Password';
 import User from './components/User';
 import Admin from './components/Admin';
 import Supervisor from './components/Supervisor';
-import Login from './components/login';
 
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
         <Route path='/user' element={<User/>}/>
         <Route path='/supervisor' element={<Supervisor/>}/>
         <Route path='/admin' element={<Admin/>}/>
-        <Route path='/login' element={<Login/>}/>
       </Routes>
     </Router>
   );

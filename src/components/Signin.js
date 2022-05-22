@@ -1,5 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect  } from 'react';
+import { useNavigate} from 'react-router-dom';
+import {db} from '../firebase-config'
+import { collection, addDoc } from "firebase/firestore";
+
+
+
 
 export default function Signin(){
     let navigate = useNavigate();
@@ -11,61 +17,33 @@ export default function Signin(){
 
     function store(){
 
-
-
-        if(document.querySelector('.type').value!=="select"){
-            localStorage.setItem(`${mail}_type`,document.querySelector('.type').value);
-            }else{
-                alert("enter the type of usage");
-                return;
-            }
-
-
-
-        if(document.querySelector('.name').value){
-        localStorage.setItem(`${mail}_name`,document.querySelector('.name').value);
-        }else{
-            alert("enter the name");
+        if(!document.querySelector('.name').value){
+        alert("enter the name");
             return;
         }
 
-        
-
-        
     
-    
-            if(document.querySelector('.deep').value){
-                localStorage.setItem(`${mail}_deep`,document.querySelector('.deep').value);
-                }else{
-                    alert("enter the deep");
+            if(!document.querySelector('.deep').value){
+               alert("enter the deep");
                     return;
-                }
+                 }
         
                 
                 if(document.querySelector('.type').value==="user"){
-
-
-                if(document.querySelector('.year_value').value){
-                    localStorage.setItem(`${mail}_year`,document.querySelector('.year').value);
-                    }else{
-                        alert("enter the year");
-                        return;
+                    if(!document.querySelector('.year_value').value){
+                    alert("enter the year");
+                            return;
                     }
-            
                 }
 
 
-                    if(document.querySelector('.code_value').value){
-                        localStorage.setItem(`${mail}_code`,document.querySelector('.code').value);
-                        }else{
-                            alert("enter the code");
+                    if(!document.querySelector('.code_value').value){
+                        alert("enter the code");
                             return;
                         }
 
-                        if(document.querySelector('.password').value===document.querySelector('.confirm').value){
-                            localStorage.setItem(`${mail}_password`,document.querySelector('.password').value);
-                            }else{
-                                alert("enter the password and confirm password");
+                        if(document.querySelector('.password').value!==document.querySelector('.confirm').value){
+                             alert("enter the password and confirm password");
                                 return;
                             }
 
@@ -77,12 +55,27 @@ export default function Signin(){
             }
         }
         
-        if(document.querySelector('.reg').value){
+        if(!document.querySelector('.reg').value){
+           alert("enter the Reg.No");
+                return; }
+
+            localStorage.setItem(`${mail}_type`,document.querySelector('.type').value);
             localStorage.setItem(`${mail}_reg`,document.querySelector('.reg').value);
-            }else{
-                alert("enter the Reg.No");
-                return;
-            }
+            localStorage.setItem(`${mail}_password`,document.querySelector('.password').value);
+            localStorage.setItem(`${mail}_code`,document.querySelector('.code_value').value);
+            localStorage.setItem(`${mail}_year`,document.querySelector('.year_value').value);
+            localStorage.setItem(`${mail}_deep`,document.querySelector('.deep').value);
+            localStorage.setItem(`${mail}_name`,document.querySelector('.name').value);
+
+
+            const usersCollectionRef = collection(db, "users")
+const createusers = async () => {
+    await addDoc(usersCollectionRef, {Name : document.querySelector('.name').value});
+};
+
+createusers();
+
+
                             navigate('/password');
                 
                                                 

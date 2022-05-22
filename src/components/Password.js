@@ -5,7 +5,7 @@ export default function Signin(){
 
     let navigate = useNavigate();
     const verify = () =>{
-        
+        alert(localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_type`));
         if(document.querySelector('.password').value===localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_password`)){
             navigate(`/${localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_type`)}`);
         }

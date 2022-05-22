@@ -7,7 +7,7 @@ export default function Admin(){
     function logout(){
             navigate(`/`);
     }
-let status=document.querySelector('.status');
+// let status=document.querySelector('.status');
 
 
 

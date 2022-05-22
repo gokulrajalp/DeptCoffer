@@ -1,8 +1,33 @@
 import React from 'react';
 import './lock.css';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect  } from 'react';
+import { useNavigate} from 'react-router-dom';
+import {db} from '../firebase-config'
+import { collection,getDocs } from "firebase/firestore";
+
+
+
 export default function Lock(){
     let navigate = useNavigate();
+
+
+
+
+    const usersCollectionRef = collection(db, "users");
+    const [users, setUsers] = useState([]);
+    
+    useEffect(()=>{
+        const getUsers = async () => {
+            const data = await getDocs(usersCollectionRef);
+      
+            setUsers(data.docs.map((doc)=> ({ ...doc.data(), id: doc.id})));
+         
+        };
+
+        getUsers();
+    }, []);
+    
+    
     
     function verify(){
     let value = document.querySelector('#mail').value;
@@ -54,6 +79,14 @@ export default function Lock(){
 </form>
 </div>
 </div>
+
+
+
+{/* {users.map((users)=>{
+    return <h1>name : {users.Name}</h1>
+})} */}
+
+
 </body>
     </html>
     

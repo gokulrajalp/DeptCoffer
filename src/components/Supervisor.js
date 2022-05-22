@@ -13,9 +13,9 @@ export default function Supervisor(){
     return(
     <div>
         <div className='msg3'>
-        <a id="greet3">Welcome </a>
-           <a id="user_name3"> {localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_name`)} </a>
-            <a id="pro2">to DeptCoffer</a>
+        <p id="greet3">Welcome </p>
+           <p id="user_name3"> {localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_name`)} </p>
+            <p id="pro2">to DeptCoffer</p>
             </div>
             <br></br>
             <br></br>
