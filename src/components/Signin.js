@@ -8,6 +8,22 @@ import { collection, addDoc } from "firebase/firestore";
 
 
 export default function Signin(){
+
+    // const [type, setType] = useState("user");
+    // const [type, setType] = useState("user");
+    // const [type, setType] = useState("user");
+    // const [type, setType] = useState("user");
+    // const [type, setType] = useState("user");
+    // const [type, setType] = useState("user");
+    // const [type, setType] = useState("user");
+    // const [type, setType] = useState("user");
+
+
+
+
+
+
+
     let navigate = useNavigate();
     var mail = localStorage.getItem(`${localStorage.getItem("current")}`);
     function remove(){
@@ -104,7 +120,7 @@ createusers();
 
 
     return(
-    <div>
+    <div className='container'>
         <h1>Welcome to the DeptCoffer</h1>
         <>{mail}</><button onClick={remove}>change and delete this mail</button>
 <br/><br/>

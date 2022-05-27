@@ -19,9 +19,7 @@ export default function Admin(){
        <a id="user_name2"> {localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_name`)}</a> 
       <a id="pro1"> to DeptCoffer</a>
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
+     
       <div className='pen'>
         <h1 className='h13'>Pending requests</h1>
         <p className='para1'>No request found for approval</p>

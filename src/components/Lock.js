@@ -71,8 +71,12 @@ export default function Lock(){
   <div className='input-group-prepend'>
     <span className='input-group-text' id="basic-addon1">Mail ID</span>
   </div>
-  <input id='mail' type='mail' class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"></input>
+  <textarea id='mail' type='mail' className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"></textarea>
 </div>
+
+
+
+
 
 <br/>
 <button className="btn btn-success" type="submit">Verify</button>
