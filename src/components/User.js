@@ -60,8 +60,8 @@ export default function User(){
         <br></br>
         <br></br>
         </div>
-       <button onClick={submit} className="btn btn-success" type="submit">Submit</button>
-        <button onClick={logout} id="logout" className="btn btn-success" type="submit">Logout</button>
+       <button onClick={submit} className="btn btn-outline-success" type="submit">Submit</button>
+        <button onClick={logout} id="logout" className="btn btn-outline-success" type="submit">Logout</button>
     </div>
     </div>
     );
