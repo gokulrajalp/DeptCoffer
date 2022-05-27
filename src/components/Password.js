@@ -1,17 +1,65 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect  } from 'react';
+import { useNavigate} from 'react-router-dom';
+import {db} from '../firebase-config'
+import { collection,getDocs } from "firebase/firestore";
 import './Password.css';
+
+
 export default function Signin(){
 
     let navigate = useNavigate();
-    const verify = () =>{
-        alert(localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_type`));
-        if(document.querySelector('.password').value===localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_password`)){
-            navigate(`/${localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_type`)}`);
-        }
+    // const verify = () =>{
+    //     // alert(localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_type`));
+    //     // if(document.querySelector('.password').value===localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_password`)){
+    //     //     navigate(`/${localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_type`)}`);
+    //     // }
+        
+    // }
+
+    const usersCollectionRef = collection(db, "users");
+    const [users, setUsers] = useState([]);
+    const [password, setPassword] = useState();
+    const [error, setError] = useState();
+    const [name, setName] = useState();
+    
+    useEffect(()=>{
+        const getUsers = async () => {
+            const data = await getDocs(usersCollectionRef);
+      
+            setUsers(data.docs.map((doc)=> ({ ...doc.data(), id: doc.id})));
+         
+        };
+
+        getUsers();
+    }, []);
+    
+    
+    
+    function verify(){
+    // var Num;
+    //     if(!localStorage.getItem("Num")){
+    //         Num=0;
+    //         localStorage.setItem("Num",Num);
+    //     }else{
+    //         Num = parseInt(localStorage.getItem("Num"));
+    //     }
+        var key = localStorage.getItem("key");
+        users.map((users)=>{
+            if(key===users.id){
+                if(password===users.Password){
+                    navigate(`/${users.Type}`);
+                }
+                else{
+                    setError("This is not a valid password");
+                }
+ 
+
+            }
+        });
+        
     }
-
-
+    
 
     return(
     <div>
@@ -23,7 +71,8 @@ export default function Signin(){
         <div class="pwd">
         <h1 class="h11">Enter your Password</h1>
         <div class="container"></div>
-        <input id="pass" className='password form-control' type='password' placeholder="password"></input>
+        <input id="pass" className='password form-control' type='password' placeholder="password" onChange={(e)=>{setPassword(e.target.value)}}></input>
+        <p>{error}</p>
         <br></br>
         <button type="submit" class="btn btn-outline-success">Verify</button> 
         </div>
