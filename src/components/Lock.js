@@ -67,19 +67,15 @@ export default function Lock(){
 
 
 <form onSubmit={verify}>
-        <div className='input-group mb-3'>
+<div className='input-group mb-3'>
   <div className='input-group-prepend'>
-    <span className='input-group-text' id="basic-addon1">Mail ID</span>
+    <span  id="basic-addon1">Enter your mail ID</span>
   </div>
-  <textarea id='mail' type='mail' className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"></textarea>
-</div>
+  <input type="mail" id="mail" name="fname"></input>
 
-
-
-
-
+  </div> 
 <br/>
-<button className="btn btn-success" type="submit">Verify</button>
+<button type="submit" class="btn btn-outline-success">Verify</button>
 </form>
 </div>
 </div>

@@ -60,7 +60,7 @@ export default function Supervisor(){
             </tr>
         </table>
         <br></br>
-        <button onClick={logout} id="logout" className="btn btn-success" type="submit">Logout</button>
+        <button onClick={logout} id="logout" className="btn btn-outline-success" type="submit">Logout</button>
         </div>
     </div>
     );

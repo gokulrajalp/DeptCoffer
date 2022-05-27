@@ -25,7 +25,7 @@ export default function Signin(){
         <div class="container"></div>
         <input id="pass" className='password form-control' type='password' placeholder="password"></input>
         <br></br>
-        <button className="btn btn-success" type="submit">Verify</button> 
+        <button type="submit" class="btn btn-outline-success">Verify</button> 
         </div>
         </form>
     </div>
