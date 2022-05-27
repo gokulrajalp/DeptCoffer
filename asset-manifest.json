@@ -1,13 +1,13 @@
 {
-  "main.css": "/DeptCoffer/static/css/main.d73e0615.chunk.css",
-  "main.js": "/DeptCoffer/static/js/main.91292f73.chunk.js",
-  "main.js.map": "/DeptCoffer/static/js/main.91292f73.chunk.js.map",
+  "main.css": "/DeptCoffer/static/css/main.836d617f.chunk.css",
+  "main.js": "/DeptCoffer/static/js/main.6e3392ea.chunk.js",
+  "main.js.map": "/DeptCoffer/static/js/main.6e3392ea.chunk.js.map",
   "runtime~main.js": "/DeptCoffer/static/js/runtime~main.34949066.js",
   "runtime~main.js.map": "/DeptCoffer/static/js/runtime~main.34949066.js.map",
-  "static/js/2.9f7ccfab.chunk.js": "/DeptCoffer/static/js/2.9f7ccfab.chunk.js",
-  "static/js/2.9f7ccfab.chunk.js.map": "/DeptCoffer/static/js/2.9f7ccfab.chunk.js.map",
+  "static/js/2.661541a8.chunk.js": "/DeptCoffer/static/js/2.661541a8.chunk.js",
+  "static/js/2.661541a8.chunk.js.map": "/DeptCoffer/static/js/2.661541a8.chunk.js.map",
   "index.html": "/DeptCoffer/index.html",
-  "precache-manifest.5f4772bac261ed06d07dc2e29d24e105.js": "/DeptCoffer/precache-manifest.5f4772bac261ed06d07dc2e29d24e105.js",
+  "precache-manifest.4478b60b7c4f53692be8cc1476b89d95.js": "/DeptCoffer/precache-manifest.4478b60b7c4f53692be8cc1476b89d95.js",
   "service-worker.js": "/DeptCoffer/service-worker.js",
-  "static/css/main.d73e0615.chunk.css.map": "/DeptCoffer/static/css/main.d73e0615.chunk.css.map"
+  "static/css/main.836d617f.chunk.css.map": "/DeptCoffer/static/css/main.836d617f.chunk.css.map"
 }
