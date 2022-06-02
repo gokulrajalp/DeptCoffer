@@ -63,6 +63,17 @@ td{
     font-size: 20px;
 }
 
-.title{
+.title {
     border-radius: 12px;
+    border: 1px solid green;
+}
+.subject{
+    border-radius: 12px;
+    border: 1px solid green;
+}
+#hi{
+    padding-left: 220px;
+}
+.description{
+    border: 1px solid green;
 }
