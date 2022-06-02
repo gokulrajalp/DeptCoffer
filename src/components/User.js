@@ -29,10 +29,10 @@ export default function User(){
         <a id="pro">to DeptCoffer</a>
         </div>
         <br></br>
-        <div className='container'>
-        <h1><u>Request Status</u></h1>
+        <div id='hi'>
+        <h1>Request Status</h1>
         <p className='para'>No request found</p>
-        <br></br>
+        {/* <br></br> */}
         <table>
             <tr>
                 <th>S.No</th>
@@ -48,7 +48,7 @@ export default function User(){
             </tr>
         </table>
         <br></br>
-        <h1 id="h12"><u>Add new Request</u></h1>
+        <h1 id="h12">Add new Request</h1>
         <div className='req'>
         <h3 id="req1">Request title</h3><input className='title'/>
         <br></br>
@@ -60,8 +60,8 @@ export default function User(){
         <br></br>
         <br></br>
         </div>
-       <button onClick={submit} className="btn btn-success" type="submit">Submit</button>
-        <button onClick={logout} id="logout" className="btn btn-success" type="submit">Logout</button>
+       <button onClick={submit} className="btn btn-outline-success" type="submit">Submit</button>
+        <button onClick={logout} id="logout" className="btn btn-outline-success" type="submit">Logout</button>
     </div>
     </div>
     );

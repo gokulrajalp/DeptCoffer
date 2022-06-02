@@ -15,6 +15,7 @@ export default function Lock(){
 
     const usersCollectionRef = collection(db, "users");
     const [users, setUsers] = useState([]);
+    const [mail, setMail] = useState();
     
     useEffect(()=>{
         const getUsers = async () => {
@@ -30,29 +31,31 @@ export default function Lock(){
     
     
     function verify(){
-    let value = document.querySelector('#mail').value;
-    var Num;
-        if(!localStorage.getItem("Num")){
-            Num=0;
-            localStorage.setItem("Num",Num);
-        }else{
-            Num = parseInt(localStorage.getItem("Num"));
-        }
+    // var Num;
+    //     if(!localStorage.getItem("Num")){
+    //         Num=0;
+    //         localStorage.setItem("Num",Num);
+    //     }else{
+    //         Num = parseInt(localStorage.getItem("Num"));
+    //     }
         var check = false;
-        for(var i=0; i<Num; i++){
-            if(value===localStorage.getItem(`${i}`)){
+        users.map((users)=>{
+            if(mail===users.Mail){
                 check = true;
-                localStorage.setItem("current",i);
+                localStorage.setItem("key",users.id);
+
             }
-        }
+        });
+        
         
         if(check){
             navigate('/password');
         }else{
-            localStorage.setItem(`${Num}`,value);
-            localStorage.setItem("current",Num);
-            Num++;
-            localStorage.setItem("Num",Num);
+            // localStorage.setItem(`${Num}`,mail);
+            // localStorage.setItem("current",Num);
+            // Num++;
+            localStorage.setItem("mail",mail);
+            // localStorage.setItem("Num",Num);
             navigate('/signin');
         }
     }
@@ -67,15 +70,15 @@ export default function Lock(){
 
 
 <form onSubmit={verify}>
-        <div className='input-group mb-3'>
+<div className='input-group mb-3'>
   <div className='input-group-prepend'>
-    <span className='input-group-text' id="basic-addon1">Mail ID</span>
+    <span  id="basic-addon1">Enter your mail ID</span>
   </div>
-  <input id='mail' type='mail' class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"></input>
-</div>
+  <input type="mail" id="mail" name="fname" onChange={(e)=>{setMail(e.target.value)}}></input>
 
+  </div> 
 <br/>
-<button className="btn btn-success" type="submit">Verify</button>
+<button type="submit" class="btn btn-outline-success">Verify</button>
 </form>
 </div>
 </div>
@@ -83,7 +86,7 @@ export default function Lock(){
 
 
 {/* {users.map((users)=>{
-    return <h1>name : {users.Name}</h1>
+    return <div><h1>name : {users.Mail}</h1><h1>type : {users.Type}</h1></div>
 })} */}
 
 

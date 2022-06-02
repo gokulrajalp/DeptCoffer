@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(236, 213, 213);
+    background-color:rgb(230, 219, 219);
     background-repeat: no-repeat;
     background-size: stretch;
     /* background:rgb(227, 186, 166); */
@@ -7,13 +7,14 @@ body{
    
 }
 
+
 .h1{
     color: rgb(236, 9, 119);
     margin: 0;
     padding: 0;
     text-align: center;
-    font-size:90px;
-    top: 10%;
+    font-size:75px;
+    top: 9%;
 }
 
 h2{
@@ -26,6 +27,11 @@ h2{
    text-align: center;
    position: absolute;
    top: 30%;
-   left:30%;
+   left:27%;
 }
-
+input[type=mail] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }

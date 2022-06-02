@@ -17,11 +17,8 @@ export default function Supervisor(){
            <p id="user_name3"> {localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_name`)} </p>
             <p id="pro2">to DeptCoffer</p>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
             <div className='pen1'>
-        <h1 className='h14'>Pending requests</h1>
+        <h1 className='h14'>Pending request</h1>
         <p className='para2'>No request found for approval</p>
         <br></br>
         <table className='table2'>
@@ -60,7 +57,7 @@ export default function Supervisor(){
             </tr>
         </table>
         <br></br>
-        <button onClick={logout} id="logout" className="btn btn-success" type="submit">Logout</button>
+        <button onClick={logout} id="logout" className="btn btn-outline-success" type="submit">Logout</button>
         </div>
     </div>
     );
