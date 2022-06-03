@@ -31,13 +31,6 @@ export default function Lock(){
     
     
     function verify(){
-    // var Num;
-    //     if(!localStorage.getItem("Num")){
-    //         Num=0;
-    //         localStorage.setItem("Num",Num);
-    //     }else{
-    //         Num = parseInt(localStorage.getItem("Num"));
-    //     }
         var check = false;
         users.map((users)=>{
             if(mail===users.Mail){
@@ -51,11 +44,7 @@ export default function Lock(){
         if(check){
             navigate('/password');
         }else{
-            // localStorage.setItem(`${Num}`,mail);
-            // localStorage.setItem("current",Num);
-            // Num++;
             localStorage.setItem("mail",mail);
-            // localStorage.setItem("Num",Num);
             navigate('/signin');
         }
     }

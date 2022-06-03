@@ -9,13 +9,6 @@ import './Password.css';
 export default function Signin(){
 
     let navigate = useNavigate();
-    // const verify = () =>{
-    //     // alert(localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_type`));
-    //     // if(document.querySelector('.password').value===localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_password`)){
-    //     //     navigate(`/${localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_type`)}`);
-    //     // }
-        
-    // }
 
     const usersCollectionRef = collection(db, "users");
     const [users, setUsers] = useState([]);
@@ -37,13 +30,6 @@ export default function Signin(){
     
     
     function verify(){
-    // var Num;
-    //     if(!localStorage.getItem("Num")){
-    //         Num=0;
-    //         localStorage.setItem("Num",Num);
-    //     }else{
-    //         Num = parseInt(localStorage.getItem("Num"));
-    //     }
         var key = localStorage.getItem("key");
         users.map((users)=>{
             if(key===users.id){
@@ -53,11 +39,8 @@ export default function Signin(){
                 else{
                     setError("This is not a valid password");
                 }
- 
-
             }
         });
-        
     }
     
 
