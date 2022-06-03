@@ -13,7 +13,11 @@ export default function Admin(){
 
     return(
     <div>
-        <section className="container">
+         <div class="Logout">
+        <button onClick={logout} className="btn btn-outline-success " 
+        type="submit">Logout</button>
+        </div>
+        <section class="hello">
         <div className='msg2'>
         <a id="greet2">Welcome </a> 
        <a id="user_name2"> {localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_name`)}</a> 
@@ -26,7 +30,6 @@ export default function Admin(){
         </div>
         <div className='tableContent'>
         <table className='table1'>
-            <div>
             <tr>
                 <th>S.No</th>
                 <th>Name</th>
@@ -39,30 +42,27 @@ export default function Admin(){
                 <td>Aditya</td>
                 <td>1913003</td>
                 <td>Leave</td>
-                <td><button className="btn btn-success " type="submit">Approved</button></td>
+                <td><button className="btn btn-outline-success " type="submit">Approved</button></td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>Arun</td>
                 <td>1913009</td>
                 <td>On-Duty</td>
-                <td><button className="btn btn-danger" type="submit">Pending</button></td>
+                <td><button className="btn btn-outline-danger" type="submit">Pending</button></td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>Gokulraja</td>
                 <td>1913028</td>
                 <td>Fees Structure</td>
-                <td><button className="btn btn-success status" type="submit">Delivered</button></td>
+                <td><button className="btn btn-outline-success status" type="submit">Delivered</button></td>
             </tr>
-            </div>
+            
         </table>
-        <br></br>
+        {/* <br></br> */}
        
-        <div class="Logout">
-        <button onClick={logout} className="btn btn-success " 
-        type="submit">Logout</button>
-        </div>
+        
         </div>
         </section>
     </div>
