@@ -14,7 +14,7 @@ export default function Signin(){
     const [users, setUsers] = useState([]);
     const [password, setPassword] = useState();
     const [error, setError] = useState();
-    const [name, setName] = useState();
+    // const [name, setName] = useState();
     
     useEffect(()=>{
         const getUsers = async () => {
@@ -31,7 +31,7 @@ export default function Signin(){
     
     function verify(){
         var key = localStorage.getItem("key");
-        users.map((users)=>{
+        users.forEach((users)=>{
             if(key===users.id){
                 if(password===users.Password){
                     navigate(`/${users.Type}`);
@@ -48,8 +48,8 @@ export default function Signin(){
     <div>
         <form onSubmit={verify}> 
         <div class="msg">
-        <a id="greet">Welcome   </a>
-        <a id="user_name">{localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_name`)}</a>
+        <a id="greet">Welcome</a>
+        <a id="user_name"> {localStorage.getItem(`name`)} </a>
         </div>
         <div class="pwd">
         <h1 class="h11">Enter your Password</h1>

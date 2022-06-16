@@ -7,7 +7,7 @@ import './signin.css'
 
 
 
-export default function Signin(){
+export default function Sign(){
 
     const [type, setType] = useState("user");
     const [name, setName] = useState();
@@ -83,7 +83,7 @@ export default function Signin(){
             localStorage.setItem(`${mail}_name`,name);
 
 
-            const usersCollectionRef = collection(db, "users")
+            const usersCollectionRef = collection(db, "users");
 const createusers = async () => {
     await addDoc(usersCollectionRef, {Name : name, Type: type, Id: id, Password:password, Year : year, Department: department, Mail: mail});
 };
@@ -96,36 +96,33 @@ createusers();
                                                 
     }
 
-
+const [admin_code, setAdmin_code] = useState("(ask your Admin)");
 
 
     function change(e){
-        setType(e.target.value);
+        setType(document.querySelector('.type').value);
+        alert(type);
         if(type==="admin"){
-            document.querySelector('.code_admin').classList.remove("d-none");
-            document.querySelector('.code').classList.add("d-none");
+            setAdmin_code("(Generate the code for your students and supervisors)");
             document.querySelector('.year').classList.add("d-none");
         } else if(type==="supervisor"){
-            document.querySelector('.code_admin').classList.add("d-none");
-            document.querySelector('.code').classList.remove("d-none");
+            setAdmin_code("(ask your Admin)");
             document.querySelector('.year').classList.add("d-none");  
         }else{
-            document.querySelector('.code_admin').classList.add("d-none");
-            document.querySelector('.code').classList.remove("d-none");
+            setAdmin_code("(ask your Admin)");
             document.querySelector('.year').classList.remove("d-none");  
         }
     }
 
 
 
-
-    return(
+    return(<div>
     <div className='container'>
         <h1>Welcome to the DeptCoffer</h1>
         <>{mail}</><button onClick={remove}>change and delete this mail</button>
 <br/><br/>
 <h3>use this application as</h3>
-        <select className='type' onChange={change}>
+        <select className='type_1' onChange={change}>
             <option value="user">User</option>
             <option value="supervisor">Supervisor</option>
             <option value="admin">Admin</option>
@@ -135,20 +132,20 @@ createusers();
 
 
         
-        <h3>name *</h3><input className='name' onChange={(e)=>{setName(e.target.value)}}/>
+        <h3>name *</h3><input className='name'  onChange={(e)=>{setName(e.target.value)}}/>
         <h3>ID.No *</h3><input className='reg' onChange={(e)=>{setId(e.target.value)}}/>
         <h3>Department *</h3><input className='deep' onChange={(e)=>{setDepartment(e.target.value)}}/>
 
         
         <div className='year'><h3>Year/Section *</h3><input className='year_value' onChange={(e)=>{setYear(e.target.value)}}/></div>
-        <h2>Class Code *<span className='code'>(ask your Admin)</span>  <span className='code_admin d-none'>(Generate the code for your students and supervisors)</span> </h2><input className='code_value' onChange={(e)=>{setCode(e.target.value)}}/>
+        <h2>Class Code *<span>{admin_code}</span> </h2><input className='code_value' onChange={(e)=>{setCode(e.target.value)}}/>
 
         <h3>New Password *</h3><input className='password' type={"password"} onChange={(e)=>{setPassword(e.target.value)}}/>
         <h3>Confirm Password *</h3><input className='confirm' type={"password"} onChange={(e)=>{setconfirmPassword(e.target.value)}}/>
 
         <button onClick={store}>Submit</button>
 
-        
+        </div>
     </div>
     );
 }

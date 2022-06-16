@@ -32,10 +32,11 @@ export default function Lock(){
     
     function verify(){
         var check = false;
-        users.map((users)=>{
+        users.forEach((users)=>{
             if(mail===users.Mail){
                 check = true;
                 localStorage.setItem("key",users.id);
+                localStorage.setItem("name",users.Name);
 
             }
         });

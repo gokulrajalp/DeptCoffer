@@ -20,7 +20,7 @@ export default function Admin(){
         <section class="hello">
         <div className='msg2'>
         <a id="greet2">Welcome </a> 
-       <a id="user_name2"> {localStorage.getItem(`${localStorage.getItem(`${localStorage.getItem("current")}`)}_name`)}</a> 
+       <a id="user_name2"> {localStorage.getItem(`name`)} </a> 
       <a id="pro1"> to DeptCoffer</a>
       </div>
      
