@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/DeptCoffer/static/css/main.a0721005.css",
-    "main.js": "/DeptCoffer/static/js/main.592d2521.js",
+    "main.js": "/DeptCoffer/static/js/main.8a64cb97.js",
     "index.html": "/DeptCoffer/index.html",
     "main.a0721005.css.map": "/DeptCoffer/static/css/main.a0721005.css.map",
-    "main.592d2521.js.map": "/DeptCoffer/static/js/main.592d2521.js.map"
+    "main.8a64cb97.js.map": "/DeptCoffer/static/js/main.8a64cb97.js.map"
   },
   "entrypoints": [
     "static/css/main.a0721005.css",
-    "static/js/main.592d2521.js"
+    "static/js/main.8a64cb97.js"
   ]
 }
