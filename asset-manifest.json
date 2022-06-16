@@ -1,13 +1,13 @@
 {
-  "main.css": "/DeptCoffer/static/css/main.836d617f.chunk.css",
-  "main.js": "/DeptCoffer/static/js/main.6e3392ea.chunk.js",
-  "main.js.map": "/DeptCoffer/static/js/main.6e3392ea.chunk.js.map",
-  "runtime~main.js": "/DeptCoffer/static/js/runtime~main.34949066.js",
-  "runtime~main.js.map": "/DeptCoffer/static/js/runtime~main.34949066.js.map",
-  "static/js/2.661541a8.chunk.js": "/DeptCoffer/static/js/2.661541a8.chunk.js",
-  "static/js/2.661541a8.chunk.js.map": "/DeptCoffer/static/js/2.661541a8.chunk.js.map",
-  "index.html": "/DeptCoffer/index.html",
-  "precache-manifest.4478b60b7c4f53692be8cc1476b89d95.js": "/DeptCoffer/precache-manifest.4478b60b7c4f53692be8cc1476b89d95.js",
-  "service-worker.js": "/DeptCoffer/service-worker.js",
-  "static/css/main.836d617f.chunk.css.map": "/DeptCoffer/static/css/main.836d617f.chunk.css.map"
+  "files": {
+    "main.css": "/DeptCoffer/static/css/main.a0721005.css",
+    "main.js": "/DeptCoffer/static/js/main.592d2521.js",
+    "index.html": "/DeptCoffer/index.html",
+    "main.a0721005.css.map": "/DeptCoffer/static/css/main.a0721005.css.map",
+    "main.592d2521.js.map": "/DeptCoffer/static/js/main.592d2521.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0721005.css",
+    "static/js/main.592d2521.js"
+  ]
 }
